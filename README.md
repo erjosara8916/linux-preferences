@@ -13,6 +13,16 @@ sudo apt install net-tools
 
 ### Configure Terminal
 
+- Install NVM
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+source ~/.bashrc
+```
+
 - Install ZSH
 ```bash
 sudo apt install git zsh
@@ -20,16 +30,17 @@ chsh -s $(which zsh) # define ZSH as default terminal
 
 # Instal Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 ```
 
-1. Configure Git
+- Configure Git
 ```bash
 sudo apt-get install git
 git config --global user.name "Erick Saravia"
 git config --global user.email "ericksaravia16@gmail.com"
 ```
 
-2. Configure Access on [Github SSh and GPG keys](https://github.com/settings/keys)
+- Configure Access on [Github SSh and GPG keys](https://github.com/settings/keys)
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/github -C "ericksaravia16@gmail.com"
 cat ~/.ssh/github.pub
@@ -60,7 +71,7 @@ sudo apt-get update"
 # Install docker packages
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-# Try instalation
+# Try installation
 ```
 
 ## Applications
