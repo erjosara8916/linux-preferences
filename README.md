@@ -31,6 +31,10 @@ chsh -s $(which zsh) # define ZSH as default terminal
 # Instal Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# install zsh-autosuggestion plugin
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+copy ./home/.zshrc ~/.zshrc
 ```
 
 - Configure Git
@@ -43,7 +47,10 @@ git config --global user.email "ericksaravia16@gmail.com"
 - Configure Access on [Github SSh and GPG keys](https://github.com/settings/keys)
 ```bash
 ssh-keygen -t ed25519 -f ~/.ssh/github -C "ericksaravia16@gmail.com"
+ssh-keygen -t ed25519 -f ~/.ssh/gitlab -C "ericksaravia16@gmail.com"
+
 cat ~/.ssh/github.pub
+cat ~/.ssh/gitlab.pub
 ```
 
 ## Docker
@@ -82,3 +89,6 @@ Visual Studio Code | Code Editor | [download](https://code.visualstudio.com/sha/
 Google Chrome | Browser | [download](https://www.google.com/chrome/)
 Microsoft Edge | Browser | [download](https://www.microsoft.com/en-us/edge/download?form=MA13FJ)
 DBeaver | Database Client | [download](https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb)
+
+## References
+- [ZSH Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
