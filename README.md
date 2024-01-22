@@ -34,7 +34,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # install zsh-autosuggestion plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-copy ./home/.zshrc ~/.zshrc
+cp ./home/.zshrc ~/.zshrc
 ```
 
 - Configure Git
